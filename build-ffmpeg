@@ -878,8 +878,8 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
       execute make install PREFIX="${WORKSPACE}"
       build_done "nv-codec" "11.1.5.0"
     fi
-    CFLAGS+=" -I/usr/local/cuda-11/include"
-    LDFLAGS+=" -L/usr/local/cuda-11/lib64"
+    CFLAGS+=" -I/usr/local/cuda-11.2/include"
+    LDFLAGS+=" -L/usr/local/cuda-11.2/lib64"
     CONFIGURE_OPTIONS+=("--enable-cuda-nvcc" "--enable-cuvid" "--enable-nvenc" "--enable-cuda-llvm")
 
     if [ -z "$LDEXEFLAGS" ]; then
